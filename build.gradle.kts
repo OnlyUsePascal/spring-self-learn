@@ -36,14 +36,10 @@ dependencies {
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-jsr310
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2")
 
+    // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
+    implementation("org.hibernate.orm:hibernate-core:6.5.2.Final")
     // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
     implementation("com.mysql:mysql-connector-j:8.3.0")
-
-    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-jdbc
-    implementation("org.springframework.data:spring-data-jdbc:3.2.0")
-
-    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa
-//    implementation("org.springframework.data:spring-data-jpa:3.2.0")
 
 
 }

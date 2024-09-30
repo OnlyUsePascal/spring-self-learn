@@ -1,16 +1,16 @@
-package example.c04_data.c01_jdbc.c02_spring_data;
+package example.c04_data.cc02_hibernate;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
-import org.springframework.data.relational.core.mapping.Table;
+import jakarta.persistence.*;
 
-
-@Table
+@Entity
+@Table(name = "Students")
 public class Student {
     @Id
-    int id;
-    String name;
-    int balance = 1000;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(name = "name", nullable = false)
+    private String name;
 
     public Student() {
     }
@@ -19,16 +19,9 @@ public class Student {
         this.name = name;
     }
 
-    public int getBalance() {
-        return balance;
-    }
-
-    public void setBalance(int balance) {
-        this.balance = balance;
-    }
-
-    public void increaseBalance(int amount) {
-        this.balance += amount;
+    public Student(int id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     public int getId() {
@@ -52,7 +45,6 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", balance=" + balance +
                 '}';
     }
 }

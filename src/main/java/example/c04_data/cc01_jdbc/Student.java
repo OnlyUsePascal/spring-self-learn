@@ -1,4 +1,4 @@
-package example.c04_data.c01_jdbc.c01_bare_hand;
+package example.c04_data.cc01_jdbc;
 
 public class Student {
     int id;

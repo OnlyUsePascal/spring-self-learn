@@ -1,4 +1,4 @@
-package example.c04_data.c03_design_pattern.c01_dao;
+package example.c00_design_patterns.c01_dao;
 
 public class Student {
     int id;
