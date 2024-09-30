@@ -1,16 +1,15 @@
 package example.c04_data.cc02_hibernate;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import org.hibernate.Session;
 
 import java.util.List;
 
 public class _Basics {
-    public void exec() {
-        Session session = null;
+    public void execHibernate() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
-            session.beginTransaction();
-
             Student student = session.get(Student.class, 1);
             // System.out.println(student);
 
@@ -24,14 +23,36 @@ public class _Basics {
             students = session.createQuery("FROM Student AS st where st.name like :name")
                     .setParameter("name", "jo%")
                     .list();
-            System.out.println(students);
-
-            session.getTransaction().commit();
+            // System.out.println(students);
         } catch (Exception err) {
             err.printStackTrace();
-            session.getTransaction().rollback();
         } finally {
             session.close();
+        }
+    }
+
+    public void execJpa() {
+        EntityManager entityManager = JpaUtil.getEntityManager();
+        try {
+            Student student = entityManager.find(Student.class, 1);
+            // System.out.println(student);
+
+            // SQL query
+            List<Student> students = entityManager
+                    .createNativeQuery("select * from Students;",Student.class)
+                    .getResultList();
+            // System.out.println(students);
+
+            // JPQL query
+            Query query = entityManager
+                    .createQuery("select st from Student st where st.name like :name", Student.class)
+                    .setParameter("name", "jo%");
+            students = query.getResultList();
+            // System.out.println(students);
+        } catch (Exception err) {
+            err.printStackTrace();
+        } finally {
+            entityManager.close();
         }
     }
 }
