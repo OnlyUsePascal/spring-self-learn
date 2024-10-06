@@ -7,30 +7,6 @@ import org.hibernate.Session;
 import java.util.List;
 
 public class _Basics {
-    public void execHibernate() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        try {
-            Student student = session.get(Student.class, 1);
-            // System.out.println(student);
-
-            // SQL query
-            List<Student> students = session
-                    .createNativeQuery("select * from Students;",Student.class)
-                    .list();
-            // System.out.println(students);
-
-            // HQL query
-            students = session.createQuery("FROM Student AS st where st.name like :name")
-                    .setParameter("name", "jo%")
-                    .list();
-            // System.out.println(students);
-        } catch (Exception err) {
-            err.printStackTrace();
-        } finally {
-            session.close();
-        }
-    }
-
     public void execJpa() {
         EntityManager entityManager = JpaUtil.getEntityManager();
         try {
@@ -53,6 +29,30 @@ public class _Basics {
             err.printStackTrace();
         } finally {
             entityManager.close();
+        }
+    }
+
+    public void execHibernate() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            Student student = session.get(Student.class, 1);
+            // System.out.println(student);
+
+            // SQL query
+            List<Student> students = session
+                    .createNativeQuery("select * from Students;",Student.class)
+                    .list();
+            // System.out.println(students);
+
+            // HQL query
+            students = session.createQuery("FROM Student AS st where st.name like :name")
+                    .setParameter("name", "jo%")
+                    .list();
+            // System.out.println(students);
+        } catch (Exception err) {
+            err.printStackTrace();
+        } finally {
+            session.close();
         }
     }
 }
