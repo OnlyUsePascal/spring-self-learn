@@ -10,6 +10,6 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-    <context:component-scan base-package="example.c03_mvc.c02_spring"/>
+    <context:component-scan base-package="example.c03_mvc.cc02_spring"/>
     <mvc:annotation-driven/>
 </beans>

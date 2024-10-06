@@ -9,13 +9,13 @@
 
     <context:property-placeholder location="classpath:c03.properties" />
 
-    <bean id="gmail" class="example.c01_dependencyInjection.c03_setterInj.xml.MailServiceGmail">
+    <bean id="gmail" class="example.c01_dependencyInjection.cc03_setterInj.xml.MailServiceGmail">
         <constructor-arg name="user" value="${service.gmail.user} :)"/>
     </bean>
 
-    <bean id="outlook" class="example.c01_dependencyInjection.c03_setterInj.xml.MailServiceOutlook"/>
+    <bean id="outlook" class="example.c01_dependencyInjection.cc03_setterInj.xml.MailServiceOutlook"/>
 
-    <bean id="controller" class="example.c01_dependencyInjection.c03_setterInj.xml.Controller">
+    <bean id="controller" class="example.c01_dependencyInjection.cc03_setterInj.xml.Controller">
         <property name="mailService" ref="gmail"/>
     </bean>
 
