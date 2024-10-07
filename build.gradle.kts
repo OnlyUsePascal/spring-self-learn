@@ -41,7 +41,8 @@ dependencies {
     // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
     implementation("com.mysql:mysql-connector-j:8.3.0")
 
-
+    // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+    implementation("org.springframework:spring-jdbc:6.1.0")
 }
 
 tasks.test {
