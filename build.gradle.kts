@@ -21,11 +21,6 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework/spring-context
     implementation("org.springframework:spring-context:6.1.6")
 
-//    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure
-//    implementation("org.springframework.boot:spring-boot-autoconfigure:3.3.0")
-//    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
-//    implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.3.0")
-
     // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
     implementation("org.springframework:spring-webmvc:6.1.6")
     // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
@@ -43,6 +38,8 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
     implementation("org.springframework:spring-jdbc:6.1.0")
+// https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa
+    implementation("org.springframework.data:spring-data-jpa:3.2.2")
 }
 
 tasks.test {
