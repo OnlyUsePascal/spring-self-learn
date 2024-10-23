@@ -40,6 +40,10 @@ dependencies {
     implementation("org.springframework:spring-jdbc:6.1.0")
 // https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa
     implementation("org.springframework.data:spring-data-jpa:3.2.2")
+
+//  spring boot for mvc servlet container
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf:3.3.4")
+    implementation("org.springframework.boot:spring-boot-starter-web:3.3.4")
 }
 
 tasks.test {
