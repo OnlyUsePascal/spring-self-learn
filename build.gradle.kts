@@ -44,6 +44,9 @@ dependencies {
 //  spring boot for mvc servlet container
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf:3.3.4")
     implementation("org.springframework.boot:spring-boot-starter-web:3.3.4")
+
+// https://mvnrepository.com/artifact/org.eclipse.jetty.ee10/jetty-ee10-servlet
+    implementation("org.eclipse.jetty.ee10:jetty-ee10-servlet:12.0.0")
 }
 
 tasks.test {

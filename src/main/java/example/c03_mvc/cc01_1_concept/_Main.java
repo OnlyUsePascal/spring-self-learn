@@ -1,4 +1,4 @@
-package example.c03_mvc.cc01_concept;
+package example.c03_mvc.cc01_1_concept;
 
 public class _Main {
     public static void main(String[] args) throws InterruptedException {
