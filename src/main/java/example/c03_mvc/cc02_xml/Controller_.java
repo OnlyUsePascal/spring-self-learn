@@ -1,4 +1,4 @@
-package example.c03_mvc.cc02_spring;
+package example.c03_mvc.cc02_xml;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ public class Controller_ {
     @Autowired
     Model model;
 
-    @RequestMapping(value = "/all")
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Student> getStudents() {
         return model.getStudents();
     }

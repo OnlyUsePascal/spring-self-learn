@@ -1,4 +1,4 @@
-package example.c03_mvc.cc02_spring;
+package example.c03_mvc.cc02_xml;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
