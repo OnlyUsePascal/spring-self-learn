@@ -4,7 +4,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
 
 public class MyServlet extends HttpServlet {
@@ -15,6 +14,7 @@ public class MyServlet extends HttpServlet {
         resp.getWriter().print("<html><head></head><body><h1>Welcome!</h1><p>This is a very cool page!</p></body></html>");
     }
 
+    // not working currently
     public void getStudent(HttpServletResponse resp, int sid) throws IOException {
         resp.setContentType("application/json");
         // fake id or some shit
@@ -30,8 +30,8 @@ public class MyServlet extends HttpServlet {
         String uri = req.getRequestURI();
         if (uri.equals(Main.CONTEXT_PATH + MAPPING_URI)) {
             welcome(resp);
-//        } else if (uri.startsWith(Main.CONTEXT_PATH + MAPPING_URI + "/student/")) {
-//            getStudent(resp, (int) (Math.random() * 100));
+        } else if (uri.startsWith(Main.CONTEXT_PATH + MAPPING_URI + "/student/")) {
+            getStudent(resp, (int) (Math.random() * 100));
         } else {
             throw new IllegalStateException("Help, I don't know what to do with this url");
         }

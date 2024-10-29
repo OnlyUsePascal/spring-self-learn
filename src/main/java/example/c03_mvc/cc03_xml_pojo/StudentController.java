@@ -15,7 +15,6 @@ public class StudentController {
         return new Student(sid, "Joun");
     }
 
-    //http://localhost:8080/testMvc2/student/all?name=joun
     @GetMapping(value = "/all")
     public List<Student> findAll(@RequestParam(value = "name", required = false) String name) {
         System.out.printf("finding students with name: " + name);

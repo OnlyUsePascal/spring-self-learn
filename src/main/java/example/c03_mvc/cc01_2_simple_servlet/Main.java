@@ -18,8 +18,9 @@ public class Main {
         server.setHandler(contextHandler);
         server.start();
         System.out.println("Listening at port: " + PORT);
-        server.join();
+//        server.join();
     }
+
     public static void main(String[] args) throws Exception{
         System.out.println("Hello world!");
         new Main().exec();
