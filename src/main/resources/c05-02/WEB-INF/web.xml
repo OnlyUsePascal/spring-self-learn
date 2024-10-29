@@ -15,7 +15,7 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
-                org.example.mvc_data.config.MvcConfig
+                example.c05_secure.cc02_data.config.MvcConfig
             </param-value>
         </init-param>
 
