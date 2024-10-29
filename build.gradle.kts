@@ -47,6 +47,12 @@ dependencies {
 
 // https://mvnrepository.com/artifact/org.eclipse.jetty.ee10/jetty-ee10-servlet
     implementation("org.eclipse.jetty.ee10:jetty-ee10-servlet:12.0.0")
+
+    // security
+// https://mvnrepository.com/artifact/org.springframework.security/spring-security-config
+    implementation("org.springframework.security:spring-security-config:6.1.6")
+// https://mvnrepository.com/artifact/org.springframework.security/spring-security-web
+    implementation("org.springframework.security:spring-security-web:6.1.6")
 }
 
 tasks.test {
